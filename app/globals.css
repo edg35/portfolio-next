@@ -364,10 +364,19 @@ section {
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }
 
 .details-container.max-height {
   padding: 1.5rem;
+}
+
+.details-container .icon {
+  margin: 0 auto;
 }
 
 .section-container {
@@ -412,12 +421,14 @@ section {
 article {
   display: flex;
   width: 10rem;
-  justify-content: space-around;
+  justify-content: flex-start;
+  align-items: flex-start;
   gap: 0.5rem;
 }
 
 article .icon {
   cursor: default;
+  flex-shrink: 0;
 }
 
 .experience-certifications-container {

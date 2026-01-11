@@ -1,23 +1,54 @@
 'use client';
 
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useAnalytics } from "./hooks/useAnalytics";
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [analyticsData, setAnalyticsData] = useState({
+    total_views: '-',
+    current_month_views: '-',
+    total_downloads: '-',
+  });
+
+  const { fetchAnalytics, addResumeDownload: trackResumeDownload } = useAnalytics();
+
+  useEffect(() => {
+    // Load analytics data on mount
+    const loadAnalytics = async () => {
+      const data = await fetchAnalytics();
+      if (data) {
+        setAnalyticsData({
+          total_views: data.total_views.toString(),
+          current_month_views: data.current_month_views.toString(),
+          total_downloads: data.total_downloads.toString(),
+        });
+      }
+    };
+    loadAnalytics();
+  }, []);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const addResumeDownload = () => {
-    // Add your resume download logic here
+  const handleResumeDownload = async () => {
+    await trackResumeDownload();
     window.open('/assets/resume.pdf', '_blank');
+    // Refresh analytics data
+    const data = await fetchAnalytics();
+    if (data) {
+      setAnalyticsData({
+        total_views: data.total_views.toString(),
+        current_month_views: data.current_month_views.toString(),
+        total_downloads: data.total_downloads.toString(),
+      });
+    }
   };
 
   const loadAWSDiagram = () => {
-    // Add your AWS diagram loading logic here
-    console.log('Loading AWS diagram');
+    window.open('/assets/diagram.pdf');
   };
 
   return (
@@ -59,7 +90,7 @@ export default function Home() {
           <h1 className="title">Ethan Green</h1>
           <p className="section__text__p2">Software Developer</p>
           <div className="btn-container">
-            <button className="btn btn-color-2 text-xs" onClick={addResumeDownload}>
+            <button className="btn btn-color-2 text-xs" onClick={handleResumeDownload}>
               Download CV
             </button>
             <button className="btn btn-color-1 text-xs" onClick={() => window.location.href = '#contact'}>
@@ -82,17 +113,17 @@ export default function Home() {
             <div className="details-container max-height">
               <Image src="/assets/education.png" alt="Education icon" className="icon" width={40} height={40} />
               <p>Resume Downloads</p>
-              <h3 className="live-number" id="resume_downloads">-</h3>
+              <h3 className="live-number" id="resume_downloads">{analyticsData.total_downloads}</h3>
             </div>
             <div className="details-container max-height">
               <Image src="/assets/education.png" alt="Education icon" className="icon" width={40} height={40} />
               <p>Total Views</p>
-              <h3 className="live-number" id="total_views">-</h3>
+              <h3 className="live-number" id="total_views">{analyticsData.total_views}</h3>
             </div>
             <div className="details-container max-height">
               <Image src="/assets/education.png" alt="Education icon" className="icon" width={40} height={40} />
               <p>Views This Month</p>
-              <h3 className="live-number" id="monthly_views">-</h3>
+              <h3 className="live-number" id="monthly_views">{analyticsData.current_month_views}</h3>
             </div>
           </div>
           <p className="live-about-paragraph">

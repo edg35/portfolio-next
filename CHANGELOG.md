@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.3](https://github.com/edg35/portfolio-next/compare/v1.0.2...v1.0.3) (2026-01-11)
+
+
+### Bug Fixes
+
+* live data section api error in production ([5af7aff](https://github.com/edg35/portfolio-next/commit/5af7aff352ff6c5d8dee14aa455eff4af100fc1d))
+
 ## [1.0.2](https://github.com/edg35/portfolio-next/compare/v1.0.1...v1.0.2) (2026-01-11)
 
 

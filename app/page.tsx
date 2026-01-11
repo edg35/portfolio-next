@@ -111,17 +111,17 @@ export default function Home() {
         <div className="live-container">
           <div className="live-data-container">
             <div className="details-container max-height">
-              <Image src="/assets/education.png" alt="Education icon" className="icon" width={40} height={40} />
+              <Image src="/assets/education.png" alt="Education icon" className="icon" width={32} height={32} />
               <p>Resume Downloads</p>
               <h3 className="live-number" id="resume_downloads">{analyticsData.total_downloads}</h3>
             </div>
             <div className="details-container max-height">
-              <Image src="/assets/education.png" alt="Education icon" className="icon" width={40} height={40} />
+              <Image src="/assets/education.png" alt="Education icon" className="icon" width={32} height={32} />
               <p>Total Views</p>
               <h3 className="live-number" id="total_views">{analyticsData.total_views}</h3>
             </div>
             <div className="details-container max-height">
-              <Image src="/assets/education.png" alt="Education icon" className="icon" width={40} height={40} />
+              <Image src="/assets/education.png" alt="Education icon" className="icon" width={32} height={32} />
               <p>Views This Month</p>
               <h3 className="live-number" id="monthly_views">{analyticsData.current_month_views}</h3>
             </div>

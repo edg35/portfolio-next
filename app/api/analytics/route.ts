@@ -1,9 +1,17 @@
 import { NextRequest, NextResponse } from 'next/server';
-const LAMBDA_URL = process.env.LAMBDA_URL as string;
+const LAMBDA_URL = process.env.LAMBDA_URL;
 
 // GET - Fetch live analytics data
 export async function GET() {
   try {
+    if (!LAMBDA_URL) {
+      console.error('LAMBDA_URL environment variable is not set');
+      return NextResponse.json(
+        { error: 'Analytics service not configured' },
+        { status: 503 }
+      );
+    }
+
     const response = await fetch(LAMBDA_URL, {
       method: 'GET',
       headers: {
@@ -34,6 +42,14 @@ export async function GET() {
 // POST - Add page view or resume download
 export async function POST(request: NextRequest) {
   try {
+    if (!LAMBDA_URL) {
+      console.error('LAMBDA_URL environment variable is not set');
+      return NextResponse.json(
+        { error: 'Analytics service not configured' },
+        { status: 503 }
+      );
+    }
+
     const body = await request.json();
     const { type } = body;
 

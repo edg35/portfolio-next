@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.2](https://github.com/edg35/portfolio-next/compare/v1.0.1...v1.0.2) (2026-01-11)
+
+
+### Bug Fixes
+
+* fixed live ui ([0086e8c](https://github.com/edg35/portfolio-next/commit/0086e8c60337729c616a448725380a0ee813348b))
+* fixed ui in about me section ([e87c496](https://github.com/edg35/portfolio-next/commit/e87c4967c6d414d61f3ce716a51fcef1c0b492a7))
+
 ## [1.0.1](https://github.com/edg35/portfolio-next/compare/v1.0.0...v1.0.1) (2026-01-11)
 
 

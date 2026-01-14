@@ -415,12 +415,12 @@ section {
   flex-wrap: wrap;
   flex-direction: row;
   gap: 2.5rem;
-  justify-content: space-around;
+  justify-content: flex-start;
 }
 
 article {
   display: flex;
-  width: 10rem;
+  /* width: 10rem; */
   justify-content: flex-start;
   align-items: flex-start;
   gap: 0.5rem;

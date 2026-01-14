@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.4](https://github.com/edg35/portfolio-next/compare/v1.0.3...v1.0.4) (2026-01-14)
+
+
+### Bug Fixes
+
+* **css:** fixed typescript alignment issue ([dbfb3e4](https://github.com/edg35/portfolio-next/commit/dbfb3e4a8133e4d7c4ca738aa32e081403d9d86e))
+
 ## [1.0.3](https://github.com/edg35/portfolio-next/compare/v1.0.2...v1.0.3) (2026-01-11)
 
 

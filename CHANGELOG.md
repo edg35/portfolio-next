@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.5](https://github.com/edg35/portfolio-next/compare/v1.0.4...v1.0.5) (2026-01-15)
+
+
+### Bug Fixes
+
+* **css:** fixed image size inconsistancy for project section ([258ca31](https://github.com/edg35/portfolio-next/commit/258ca3119eb6ff63cae8537e5e6d5ac1ff5e1839))
+
 ## [1.0.4](https://github.com/edg35/portfolio-next/compare/v1.0.3...v1.0.4) (2026-01-14)
 
 

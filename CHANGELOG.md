@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+# [1.1.0](https://github.com/edg35/portfolio-next/compare/v1.0.5...v1.1.0) (2026-01-17)
+
+
+### Bug Fixes
+
+* added rss-parser module ([b6a9884](https://github.com/edg35/portfolio-next/commit/b6a98840b52d190b82c116ea6c9d04381a7e4e1d))
+
+
+### Features
+
+* reading section addition ([c064768](https://github.com/edg35/portfolio-next/commit/c064768cda7dd56458798d774c9a8834fe4a562b))
+
 ## [1.0.5](https://github.com/edg35/portfolio-next/compare/v1.0.4...v1.0.5) (2026-01-15)
 
 

@@ -108,9 +108,15 @@
     }
 
     .section__pic-container {
-        width: auto;
+        width: 46vw;
         height: 46vw;
         justify-content: center;
+        margin: 0 auto 2rem;
+    }
+
+    .about-pic {
+        max-width: 100%;
+        height: auto;
     }
 
     .section__text__p2 {

@@ -19,11 +19,11 @@ export function ReadingSection({ books }: ReadingSectionProps) {
                     <p className="section__text__p2">No books or articles to display.</p>
                 ) : (
                     books.map((book) => (
-                        <div key={book.bookId} className="flex flex-row gap-4 items-stretch">
+                        <div key={book.bookId} className="flex flex-row gap-4 items-stretch justify-center">
                             <a href={book.link} target="_blank" rel="noopener noreferrer" className="flex-shrink-0 relative h-full">
-                                <Image fill src={book.cover} alt={`${book.title} cover`} className="h-full !w-auto !relative object-contain" />
+                                <Image fill src={book.cover} alt={`${book.title} cover`} className="h-full !w-auto !relative object-contain max-h-64" />
                             </a>
-                            <div className="flex flex-col justify-start flex-1">
+                            <div className="hidden sm:flex flex-col justify-start flex-1">
                                 <a href={book.link} target="_blank" rel="noopener noreferrer" className="reading-item__title">
                                     {book.title}
                                 </a>

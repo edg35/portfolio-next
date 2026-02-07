@@ -9,14 +9,15 @@ export function ProjectsSection() {
                 <div className="about-containers">
                     <div className="details-container color-container">
                         <div className="article-container">
+                            {/* TODO: Change image for project 1 portfolio site */}
                             <Image src="/assets/project-1.png" alt="Project 1" className="project-img" width={300} height={200} />
                         </div>
-                        <h2 className="experience-sub-title project-title">CJ Environmental</h2>
+                        <h2 className="experience-sub-title project-title">Portfolio Site</h2>
                         <div className="btn-container">
-                            <button className="btn btn-color-2 project-btn" onClick={() => window.location.href = 'https://github.com/edg35/cj-environmental'}>
+                            <button className="btn btn-color-2 project-btn" onClick={() => window.location.href = 'https://github.com/edg35/portfolio-next'}>
                                 Github
                             </button>
-                            <button className="btn btn-color-2 project-btn" onClick={() => window.location.href = 'https://cjenvironmentalsolutions.com'}>
+                            <button className="btn btn-color-2 project-btn" onClick={() => window.location.href = 'https://www.ethandgreen.com/'}>
                                 Live Demo
                             </button>
                         </div>

@@ -27,12 +27,12 @@ export function HamburgerNav({ isMenuOpen, toggleMenu }: NavigationProps) {
         <nav id="hamburger-nav">
             <div className="logo">Ethan Green</div>
             <div className="hamburger-menu">
-                <div className="hamburger-icon" onClick={toggleMenu}>
+                <div className={`hamburger-icon${isMenuOpen ? ' open' : ''}`} onClick={toggleMenu}>
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
-                <div className="menu-links">
+                <div className={`menu-links${isMenuOpen ? ' open' : ''}`}>
                     <li><a href="#about" onClick={toggleMenu}>About</a></li>
                     <li><a href="#experience" onClick={toggleMenu}>Experience</a></li>
                     <li><a href="#projects" onClick={toggleMenu}>Projects</a></li>
